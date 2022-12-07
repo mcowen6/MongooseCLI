@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const { string } = require("yargs");
 
 const movieSchema = new mongoose.Schema({
   title: {
@@ -17,6 +16,8 @@ const movieSchema = new mongoose.Schema({
   },
   rating: {
     type: Number,
+    min: 0,
+    max: 5,
     default: "Not specified",
   },
 });

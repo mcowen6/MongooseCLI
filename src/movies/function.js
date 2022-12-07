@@ -9,4 +9,14 @@ async function createMovie(movieObject) {
   }
 }
 
-module.exports = { createMovie };
+async function readMovie() {
+  try {
+    const results = await MovieCollection.find();
+    return results;
+    console.table(results);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+module.exports = { createMovie, readMovie };
