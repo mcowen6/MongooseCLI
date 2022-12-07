@@ -19,7 +19,7 @@ async function app(yargsinput) {
   } else if (yargsinput.delete) {
     // code for delete a movie
   } else {
-    console.log("Undrecognised command");
+    console.log("Unrecognised command");
   }
   await mongoose.disconnect();
 }
